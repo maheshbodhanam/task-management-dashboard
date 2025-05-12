@@ -1,8 +1,5 @@
 import { http, HttpResponse } from "msw";
-
-let tasks = [
-  { id: 1, title: "Task One", description: "Test desc", status: "To Do" },
-];
+import { tasks } from "./db";
 
 // GET all tasks
 export const handlers = [
