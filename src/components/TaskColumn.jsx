@@ -1,4 +1,3 @@
-import React from "react";
 import TaskCard from "./TaskCard";
 
 const TaskColumn = ({ status, tasks, onDrop, onDragStart }) => {
