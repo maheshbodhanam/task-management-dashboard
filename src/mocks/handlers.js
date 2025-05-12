@@ -1,31 +1,28 @@
-import { http } from "msw";
+import { http, HttpResponse } from "msw";
 
 let tasks = [
-  { id: "1", title: "Sample Task 1", status: "todo" },
-  { id: "2", title: "Sample Task 2", status: "inprogress" },
+  { id: 1, title: "Task One", description: "Test desc", status: "To Do" },
 ];
 
+// GET all tasks
 export const handlers = [
-  // GET all tasks
-  http.get("http://localhost:3001/tasks", (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(tasks));
+  http.get("/tasks", () => {
+    return HttpResponse.json(tasks);
   }),
 
-  // POST a new task
-  http.post("http://localhost:3001/tasks", async (req, res, ctx) => {
-    const newTask = await req.json();
-    newTask.id = Date.now().toString(); // mock ID
+  // POST create task
+  http.post("/tasks", async ({ request }) => {
+    const newTask = await request.json();
+    newTask.id = Date.now(); // generate unique ID
     tasks.push(newTask);
-    return res(ctx.status(201), ctx.json(newTask));
+    return HttpResponse.json(newTask);
   }),
 
-  // PUT to update a task
-  http.put("http://localhost:3001/tasks/:id", async (req, res, ctx) => {
-    const { id } = req.params;
-    const updatedTask = await req.json();
-    tasks = tasks.map((task) =>
-      task.id === id ? { ...task, ...updatedTask } : task
-    );
-    return res(ctx.status(200), ctx.json({ id, ...updatedTask }));
+  // PUT update task
+  http.put("/tasks/:id", async ({ params, request }) => {
+    const { id } = params;
+    const updatedTask = await request.json();
+    tasks = tasks.map((t) => (t.id === parseInt(id) ? updatedTask : t));
+    return HttpResponse.json(updatedTask);
   }),
 ];
