@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:3001" });
+const API = axios.create({ baseURL: "/" });
 
 export const fetchTasks = () => API.get("/tasks");
 export const createTask = (task) => API.post("/tasks", task);
