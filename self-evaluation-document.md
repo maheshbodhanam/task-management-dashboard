@@ -1,35 +1,32 @@
 
 ---
 
-## ✅ 3. **Self-Evaluation Document**
+# ✅ 3. **Self-Evaluation Document**
 
-```markdown
-# 🧾 Self-Evaluation: Task Management Dashboard (React)
+
+## 🧾 Self-Evaluation: Task Management Dashboard (React)
 
 ## a. Half-Page Summary
 
-This project is a fully functional, client-side Kanban-style task management dashboard. It uses React for the UI and `json-server` to simulate backend operations such as task creation and updates. Tasks can be added via a modal form and dragged across columns (To Do, In Progress, Done). 
+- This project is a fully functional, client-side Kanban-style task management dashboard. It uses React for the UI and `json-server` to simulate backend operations such as task creation and updates. Tasks can be added via a modal form and dragged across columns (To Do, In Progress, Done). 
 
-The drag-and-drop behavior is achieved using simple HTML5 events rather than external libraries, keeping the solution lightweight. Tailwind CSS ensures the UI is responsive and modern.
+- The drag-and-drop behavior is achieved using simple HTML5 events rather than external libraries, keeping the solution lightweight. Tailwind CSS ensures the UI is responsive and modern.
 
-The project fulfills the core requirements — task CRUD, column view, and drag-and-drop interaction — in a clean and intuitive interface.
+- The project fulfills the core requirements — task CRUD, column view, and drag-and-drop interaction — in a clean and intuitive interface.
 
 ## b. Self-Criticism
 
 - **No real authentication**: Any user can access and manipulate tasks without restriction.
 - **No persistent state** beyond the mock API — refreshing after API failure could cause data loss.
 - **Error handling is missing** for API calls (no try/catch or user alerts).
-- **No loading or empty state UI** — the dashboard assumes everything loads smoothly.
 - **Drag-and-drop UX could be enhanced** using libraries like `react-beautiful-dnd`.
 
 ## c. Improvements with More Time
 
 - Add real authentication (e.g., Firebase Auth).
 - Improve drag-and-drop with better feedback using `react-beautiful-dnd` or `dnd-kit`.
-- Add loader, empty states, and better error handling.
 - Use context or Redux for global state instead of local component state.
 - Add task editing and deletion capabilities.
-- Write unit and integration tests (e.g., with Jest + React Testing Library).
 
 ## d. Technology Rating (Out of 10)
 
