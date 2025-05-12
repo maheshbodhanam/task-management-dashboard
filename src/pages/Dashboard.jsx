@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { fetchTasks, createTask, updateTask } from "../api/tasksApi";
+import { useEffect, useState } from "react";
+import { createTask, fetchTasks, updateTask } from "../api/tasksApi";
 import TaskColumn from "../components/TaskColumn";
 import TaskFormModal from "../components/TaskFormModal";
 
