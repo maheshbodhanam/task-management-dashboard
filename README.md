@@ -73,10 +73,21 @@ src/
 
 ## 🧠 Approach
 
-Tasks are fetched from json-server and stored in local state.
+- Tasks are fetched from json-server and stored in local state.
 
-Drag-and-drop is handled with native HTML5 dataTransfer.
+- Drag-and-drop is handled with native HTML5 dataTransfer.
 
-Task updates are sent to the server on drop.
+- Task updates are sent to the server on drop.
 
-Component structure follows a logical breakdown by concern: form, card, column, and layout.
+- Component structure follows a logical breakdown by concern: form, card, column, and layout.
+
+  
+
+
+
+## screenshots of project
+
+ ![image](https://github.com/user-attachments/assets/df3eb778-e007-415b-bd40-47279b8b9201)
+
+ ![image](https://github.com/user-attachments/assets/923b5007-f520-45ea-86df-d6e4159179cf)
+
