@@ -53,6 +53,9 @@ npm start
 ```
 Your app will be live at http://localhost:3000.
 
+
+**App live demo**:  https://kanban-task-management-dashboard.netlify.app/
+
 ## 📁 Folder Structure
 
 ```
